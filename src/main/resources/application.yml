@@ -1,0 +1,12 @@
+
+
+sansa:
+  jwt:
+    secret: 5468566D597133743677397A24432646294A404E635266556A586E5A72347537
+    expiration: 3600
+
+spring:
+  data:
+    mongodb:
+      uuid-representation: standard
+      database: jumpdigital

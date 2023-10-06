@@ -1,0 +1,101 @@
+[
+  {
+    "id": "82e0b673-0256-41a1-ab16-559439d42f68",
+    "user": null,
+    "name": "M4A4 | Howl",
+    "color": "Green",
+    "weapon": "M4A4",
+    "hasStatTrack": true,
+    "rarity": "Contraband",
+    "description": "A mythical wolf design painted on the M4A4, known for its rarity and value",
+    "floatValue": "0.789"
+  },
+  {
+    "id": "c7a0d3c4-9ee5-498a-902f-0821b2bfb59f",
+    "user": null,
+    "name": "AWP | Dragon Lore",
+    "color": "Blue",
+    "weapon": "AWP",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A majestic dragon design painted on the AWP, symbolizing strength and dominance",
+    "floatValue": "0.045"
+  },
+  {
+    "id": "05f5b967-7501-438b-ae59-f3c01599fda1",
+    "user": null,
+    "name": "Karambit | Doppler",
+    "color": "Yellow",
+    "weapon": "Karambit",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A unique Doppler pattern on the Karambit knife, showcasing its beauty and rarity",
+    "floatValue": "0.287"
+  },
+  {
+    "id": "88d5822d-730d-4f9f-a81c-b0fd828f486c",
+    "user": null,
+    "name": "Bayonet | Marble Fade",
+    "color": "Orange",
+    "weapon": "Bayonet",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A stunning marble fade pattern on the Bayonet knife, adding elegance to its design",
+    "floatValue": "0.623"
+  },
+  {
+    "id": "52d593b0-a4f9-4294-9c82-731dbe4f87c7",
+    "user": null,
+    "name": "M9 Bayonet | Crimson Web",
+    "color": "Purple",
+    "weapon": "M9 Bayonet",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A web-like crimson pattern on the M9 Bayonet knife, representing danger and intrigue",
+    "floatValue": "0.951"
+  },
+  {
+    "id": "ff3d4446-740d-47b9-a769-3cb8e054314a",
+    "user": null,
+    "name": "Desert Eagle | Blaze",
+    "color": "Red",
+    "weapon": "Desert Eagle",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A blazing fire design on the Desert Eagle, symbolizing power and destruction",
+    "floatValue": "0.372"
+  },
+  {
+    "id": "6a8e9719-f3bb-464f-81f7-a988980315f0",
+    "user": null,
+    "name": "Gut Knife | Doppler",
+    "color": "Green",
+    "weapon": "Gut Knife",
+    "hasStatTrack": true,
+    "rarity": "Covert",
+    "description": "A mesmerizing Doppler pattern on the Gut Knife, known for its rarity and appeal",
+    "floatValue": "0.564"
+  },
+  {
+    "id": "cb594b4f-e64f-4e16-8711-a2a095e6e7f3",
+    "user": null,
+    "name": "USP-S | Kill Confirmed",
+    "color": "Blue",
+    "weapon": "USP-S",
+    "hasStatTrack": true,
+    "rarity": "Classified",
+    "description": "A skull and crossbones design on the USP-S, signifying confirmed kills and danger",
+    "floatValue": "0.896"
+  },
+  {
+    "id": "743f5172-64d0-4945-b6ed-0afd66b91e6d",
+    "user": null,
+    "name": "Glock-18 | Fade",
+    "color": "Yellow",
+    "weapon": "Glock-18",
+    "hasStatTrack": true,
+    "rarity": "Restricted",
+    "description": "A fading gradient design on the Glock-18, giving it a unique and stylish look",
+    "floatValue": "0.214"
+  }
+]
