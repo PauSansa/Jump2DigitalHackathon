@@ -22,6 +22,6 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handle(Exception e) {
-        return ResponseEntity.badRequest().body(new ErrorResponse("Something went wrong"));
+        return ResponseEntity.badRequest().body(new ErrorResponse(e.getMessage()));
     }
 }

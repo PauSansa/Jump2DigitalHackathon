@@ -3,6 +3,7 @@ package com.sansa.jumpdigitalhackathon.controller;
 import com.sansa.jumpdigitalhackathon.request.AuthRequest;
 import com.sansa.jumpdigitalhackathon.response.AuthResponse;
 import com.sansa.jumpdigitalhackathon.service.AuthService;
+import com.sansa.jumpdigitalhackathon.util.RequestValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class AuthController {
 
     @RequestMapping("/register")
     public ResponseEntity<?> register(@RequestBody AuthRequest ar){
-        if(!isRequestValid(ar)){
+        if(!RequestValidator.validateNotNullFields(ar)){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid request");
         }
 
@@ -34,7 +35,7 @@ public class AuthController {
 
     @RequestMapping("/login")
     public ResponseEntity<?> login(@RequestBody AuthRequest ar){
-        if(!isRequestValid(ar)){
+        if(!RequestValidator.validateNotNullFields(ar)){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid request");
         }
 
@@ -46,15 +47,5 @@ public class AuthController {
         return ResponseEntity.ok(new AuthResponse(token.get()));
     }
 
-    public boolean isRequestValid(AuthRequest ar){
-        if(ar.getUsername() == null || ar.getUsername().isEmpty()){
-            return false;
-        }
 
-        if(ar.getPassword() == null || ar.getPassword().isEmpty()){
-            return false;
-        }
-
-        return true;
-    }
 }
