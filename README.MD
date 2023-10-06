@@ -148,6 +148,8 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Run the main class JumpDigitalHackathonApplication in your favorite IDE and make sure to enable the Annotation Processing (it is a must to use lombook)
 
+Register providing a username and password to the endpoint `/auth/register` and send all requests with a Authentication Header with `Bearer HERE_YOUR_TOKEN`
+
 ![IDE](media/IDE.png)
 
 
@@ -163,6 +165,7 @@ Run the main class JumpDigitalHackathonApplication in your favorite IDE and make
 - **Route**: `/skins/available`
 - **Successful Response (200 OK)**:
   - Returns a list of JSON objects representing the skins available for purchase.
+- **Skin not found (404 NOT FOUND)**:
 
 ### 2. Purchase a Skin
 
@@ -173,6 +176,7 @@ Run the main class JumpDigitalHackathonApplication in your favorite IDE and make
   - `skinId` (Path): The ID of the skin that the user wants to purchase.
 - **Successful Response (200 OK)**:
   - Returns a success message along with details of the purchased skin.
+- **Skin not found (404 NOT FOUND)**:
 
 ### 3. List My Skins
 
@@ -190,6 +194,7 @@ Run the main class JumpDigitalHackathonApplication in your favorite IDE and make
 - **Request Body**: JSON object containing `skinId` and `color` fields.
 - **Successful Response (200 OK)**:
   - Returns a success message upon successfully changing the color of the skin.
+- **Skin not found (404 NOT FOUND)**:
 
 ### 5. Delete a Skin
 
@@ -200,6 +205,7 @@ Run the main class JumpDigitalHackathonApplication in your favorite IDE and make
   - `skinId` (Path): The ID of the skin to be deleted.
 - **Successful Response (200 OK)**:
   - Returns a success message upon successfully deleting the skin.
+- **Skin not found (404 NOT FOUND)**:
 
 ### 6. Get Skin Details
 
@@ -210,6 +216,7 @@ Run the main class JumpDigitalHackathonApplication in your favorite IDE and make
   - `skinId` (Path): The ID of the skin to retrieve.
 - **Successful Response (200 OK)**:
   - Returns details of the specified skin.
+- **Skin not found (404 NOT FOUND)**:
 
 <!-- CONTRIBUTING -->
 ## Contributing

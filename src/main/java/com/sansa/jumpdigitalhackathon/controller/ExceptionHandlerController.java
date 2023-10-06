@@ -12,7 +12,7 @@ public class ExceptionHandlerController {
 
     @ExceptionHandler(SkinNotFoundException.class)
     public ResponseEntity<ErrorResponse> handle(SkinNotFoundException e) {
-        return ResponseEntity.badRequest().body(new ErrorResponse("Skin not found"));
+        return ResponseEntity.status(404).body(new ErrorResponse("Skin not found"));
     }
 
     @ExceptionHandler(ExpiredJwtException.class)
