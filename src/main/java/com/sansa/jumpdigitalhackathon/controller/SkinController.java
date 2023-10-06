@@ -27,6 +27,7 @@ public class SkinController {
         return skinService.getAvailable();
     }
 
+    //Buys a skin,saves it to the user's collection in the db, and deletes it from the local file
     @PostMapping("/buy/{skinId}")
     public ResponseEntity<PurchaseResponse> buy(@PathVariable String skinId) throws IOException {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -34,6 +35,7 @@ public class SkinController {
         return ResponseEntity.ok(new PurchaseResponse("Skin bought successfully", skin));
     }
 
+    // Returns the user's skins stored in the database
     @GetMapping("/myskins")
     public ResponseEntity<List<SkinDTO>> mySkins() {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -45,6 +47,7 @@ public class SkinController {
         }
     }
 
+    // Changes the color of a skin
     @PutMapping("/color")
     public ResponseEntity<BasicMessageResponse> changeColor(@RequestBody ColorRequest cr){
         if(!RequestValidator.validateNotNullFields(cr)){
@@ -55,6 +58,7 @@ public class SkinController {
         return ResponseEntity.ok(new BasicMessageResponse("Color changed successfully"));
     }
 
+    // Deletes a skin from the user's collection
     @DeleteMapping("/delete/{skinId}")
     public ResponseEntity<BasicMessageResponse> deleteSkin(@PathVariable String skinId) throws IOException {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -62,6 +66,7 @@ public class SkinController {
         return ResponseEntity.ok(new BasicMessageResponse("Skin deleted successfully"));
     }
 
+    // Returns a skin from the user's collection or local file
     @GetMapping("/getskin/{skinId}")
     public SkinDTO getSkin(@PathVariable String skinId) throws IOException {
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
