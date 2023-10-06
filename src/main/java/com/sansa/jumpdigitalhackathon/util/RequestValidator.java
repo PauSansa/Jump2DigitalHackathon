@@ -4,6 +4,9 @@ import java.lang.reflect.Field;
 
 public class RequestValidator {
 
+    private RequestValidator() {
+    }
+
     public static boolean validateNotNullFields(Object obj) {
         // Get Request Class
         Class<?> clazz = obj.getClass();

@@ -23,7 +23,8 @@ import java.util.UUID;
 public class SkinService {
     private final SkinRepository data;
     private final SkinToDTO toDTO;
-    private final String rutaArchivo = "src/main/resources/data/skins.json";
+    private static final String rutaArchivo = "src/main/resources/data/skins.json";
+    private static final String notFoundMessage = "Skin not found";
 
     // This method is the one that reads from a File
     public List<SkinDTO> getAvailable() throws IOException {
@@ -38,7 +39,7 @@ public class SkinService {
         Skin skin = skins.stream()
                 .filter(item -> item.getId().equals(UUID.fromString(skinId)))
                 .findFirst()
-                .orElseThrow(() -> new SkinNotFoundException("Skin not found"));
+                .orElseThrow(() -> new SkinNotFoundException(notFoundMessage));
 
         if(skin.getUser() != null) {
             throw new SkinAlreadyBoughtException("Skin already bought");
@@ -64,7 +65,7 @@ public class SkinService {
         Skin skin = skins.stream()
                 .filter(item -> item.getId().equals(UUID.fromString(cr.getSkinId())))
                 .findFirst()
-                .orElseThrow(() -> new SkinNotFoundException("Skin not found"));
+                .orElseThrow(() -> new SkinNotFoundException(notFoundMessage));
         skin.setColor(cr.getColor());
         data.save(skin);
         return toDTO.apply(skin);
@@ -86,7 +87,7 @@ public class SkinService {
         Skin skin = dbSkins.stream()
                 .filter(item -> item.getId().equals(UUID.fromString(skinId)))
                 .findFirst()
-                .orElseThrow(() -> new SkinNotFoundException("Skin not found"));
+                .orElseThrow(() -> new SkinNotFoundException(notFoundMessage));
         skin.setUser(null);
         data.delete(skin);
         List<Skin> fileSkins = loadSkins();
@@ -102,7 +103,7 @@ public class SkinService {
         Skin skin = skins.stream()
                 .filter(item -> item.getId().toString().equals(skinId))
                 .findFirst()
-                .orElseThrow(() -> new SkinNotFoundException("Skin not found"));
+                .orElseThrow(() -> new SkinNotFoundException(notFoundMessage));
 
         return toDTO.apply(skin);
     }
