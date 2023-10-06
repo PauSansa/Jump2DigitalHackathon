@@ -148,7 +148,15 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Run the main class JumpDigitalHackathonApplication in your favorite IDE and make sure to enable the Annotation Processing (it is a must to use lombook)
 
-Register providing a username and password to the endpoint `/auth/register` and send all requests with a Authentication Header with `Bearer HERE_YOUR_TOKEN`
+Register providing a username and password to the endpoint `/auth/register` with a json in the body. 
+
+***Example***:
+```json
+  "username":"yourUsername",
+  "password":"yourPassword"
+```
+
+ and send all requests with a Authentication Header with `Bearer HERE_YOUR_TOKEN`
 
 ![IDE](media/IDE.png)
 
