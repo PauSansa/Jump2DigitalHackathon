@@ -158,6 +158,8 @@ Register providing a username and password to the endpoint `/auth/register` with
 
  and send all requests with a Authentication Header with `Bearer HERE_YOUR_TOKEN`
 
+ If your token expires, you can send one request to `/auth/login` with the same body as the register
+
 ![IDE](media/IDE.png)
 
 
